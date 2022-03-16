@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <style>
+        body  {
+          background-color: rgb(33, 156, 212);      
+        }
+        </style>
+    <link rel="stylesheet" href="{% static 'downloader\downloader.css' %}">
+<body>
+    <div className="search-box" id="search-box">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h1 style=" font-size: 25px; color: white; font-family: Arial, Helvetica, sans-serif;margin-top:5rem; margin-left: 36rem;">Click on the vedio to play...<h1>
+            <iframe style="margin-left: 22rem;" width="750" height="400" src={{ emb_link }}>
+            </iframe>            
+            <h1 style=" font-size: 21px; color: black; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;margin-top:1rem; text-align: center;">{{ tittle }}<h1>
+            <input style="background-color: rgb(83, 83, 83);
+            width: 10rem;
+            height: 3.5rem;
+            border-radius: 0.3rem;
+            border-color: white;
+            border-width: 2px;
+            color: white;
+            opacity: 0.8;
+            box-shadow: 5px;
+            margin-top: 1rem;margin-left: 42rem;" type="submit" id="downloadvedio" value="Download Vedio">   
+        </form>
+      </div>
+</body>
+</html>
+
